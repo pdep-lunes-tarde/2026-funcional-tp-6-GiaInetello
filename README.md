@@ -11,8 +11,8 @@
 
 ## Nombre y legajo
 
-- Legajo: **Completar** 
-- Nombre: **Completar**
+- Legajo: **233.952-3** 
+- Nombre: **Inetello Gianella**
 
 ## El enunciado
 
