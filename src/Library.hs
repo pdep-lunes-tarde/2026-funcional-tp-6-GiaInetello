@@ -45,18 +45,18 @@ descuento:: Number -> Hamburguesa -> Hamburguesa
 descuento nDesc hamburguesa = hamburguesa {precioBase= (precioBase hamburguesa) - (precioBase hamburguesa)* nDesc/100 }
 
 pdpBurguer:: Hamburguesa 
-pdpBurguer = agrandar. agrandar.flip agregarIngrediente Cheddar. flip agregarIngrediente Panceta. descuento 20 $cuartoDeLibra
+pdpBurguer = agrandar. agrandar.flip agregarIngrediente Cheddar. flip agregarIngrediente Panceta. descuento 20 $ cuartoDeLibra
 
 --Parte 2
 
 dobleCuarto:: Hamburguesa
-dobleCuarto = agrandar. flip agregarIngrediente Cheddar $cuartoDeLibra
+dobleCuarto = agrandar. flip agregarIngrediente Cheddar $ cuartoDeLibra
 
 bigPdp :: Hamburguesa
-bigPdp = flip agregarIngrediente Curry $dobleCuarto
+bigPdp = flip agregarIngrediente Curry $ dobleCuarto
 
 delDia:: Hamburguesa -> Hamburguesa
-delDia hamburguesa = flip agregarIngrediente Papas. descuento 30 $hamburguesa
+delDia hamburguesa = flip agregarIngrediente Papas. descuento 30 $ hamburguesa
 
 --Parte 3
 cambio:: Ingrediente -> Ingrediente
@@ -77,5 +77,5 @@ hacerVeggie hamburguesa = hamburguesa{ingredientes= map cambio (ingredientes ham
 cambiarPanDePati::Hamburguesa -> Hamburguesa
 cambiarPanDePati hamburguesa = hamburguesa{ingredientes = map cambioPan (ingredientes hamburguesa)} 
 
-dobleCUartoVegano :: Hamburguesa
-dobleCUartoVegano = hacerVeggie.cambiarPanDePati $ dobleCuarto
+dobleCuartoVegano :: Hamburguesa
+dobleCuartoVegano = hacerVeggie.cambiarPanDePati $ dobleCuarto
